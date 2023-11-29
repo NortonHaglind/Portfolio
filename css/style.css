@@ -1,16 +1,24 @@
 * {
     margin: 0;
+    box-sizing: border-box;
 
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 .about {
     columns: 2;
     column-gap: 3rem;
     padding: 1rem;
     align-items: center;
 
+}
+
+body {
+    height: 100vh;
+    background-color: lightgrey;
 }
 
 header {
@@ -23,9 +31,10 @@ header {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: whitesmoke;
     align-items: center;
-    box-shadow: 1rem;
-}
 
+
+}
+/*Behövde ändra alla mina floats till right för att få över baren till andra sidan.*/
 .navbar {
     overflow: hidden;
     background-color: teal;
@@ -54,7 +63,7 @@ header {
     background-color: inherit;
     font-family: inherit;
     margin: 0;
-    
+
 }
 
 .navbar a:hover,
@@ -70,8 +79,8 @@ header {
     width: 100%;
     z-index: 1;
     justify-content: right;
-    padding-right:2rem;
-    
+    padding-right: 0;
+
 }
 
 .subnav-content a {
@@ -92,9 +101,7 @@ header {
 .description {
     font-size: large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
+
 }
 
-.description-img{
-    
-}
+.description-img {}
