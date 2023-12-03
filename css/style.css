@@ -1,6 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    max-width: 100%;
 
 }
 
@@ -18,14 +19,16 @@ html {
 
 body {
     height: 100vh;
-    background-color: lightgrey;
+    background-color: #E3E7F2;
+    max-width: 100%;
+
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: teal;
+    background: #6969B3;
     padding-left: 1rem;
     padding-top: 1rem;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -34,10 +37,11 @@ header {
 
 
 }
+
 /*Behövde ändra alla mina floats till right för att få över baren till andra sidan.*/
 .navbar {
     overflow: hidden;
-    background-color: teal;
+    background-color: #6969B3;
 }
 
 .navbar a {
@@ -68,14 +72,14 @@ header {
 
 .navbar a:hover,
 .subnav:hover .subnavbtn {
-    background-color: rgb(3, 168, 168);
+    background-color: #a3a3ec;
 }
 
 .subnav-content {
     display: none;
     position: absolute;
     left: 0;
-    background-color: rgb(3, 168, 168);
+    background-color: #a3a3ec;
     width: 100%;
     z-index: 1;
     justify-content: right;
@@ -104,4 +108,6 @@ header {
 
 }
 
-.description-img {}
+.description:nth-child(even) { /* hann inte göra färdigt gidsen.*/
+    background-color: whitesmoke;
+}
