@@ -34,6 +34,8 @@ header {
     padding: 1rem;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color:white;
+    position: sticky;
+    top:0;
     
 
 }
@@ -44,7 +46,7 @@ header {
 .logo{
     width:60px;
 }
-.primary-navigtion {
+.primary-navigation {
     display: flex;
     list-style: none;
     gap: 1rem;
@@ -96,4 +98,62 @@ footer {
 }
 .pic1{
     max-width: 50%;
+}
+.hamburger-button {
+    all: unset;
+    display: none;
+    place-items: center;
+}
+ 
+@media(width<720px){
+    .hamburger-button{
+       display: grid;
+    }
+}
+@media (width < 720px) {
+    .primary-navigation{
+        display: none;
+    }
+    main{
+        columns: 1;
+    }
+    .section{
+        padding-inline: 2rem;
+    }
+    .footer-container{
+        display: block;
+    }
+    .main-content{
+        clip-path:none;
+    }
+    
+}
+@media (width < 720px) {   
+    
+    .primary-navigation {
+        position: fixed;
+        
+        height:100%;
+        inset: 5rem 0 0 0;
+        
+
+        display: flex;
+        justify-content: start;
+        align-items: end;
+        flex-direction: column;
+        
+        padding: 4rem 2rem;
+        
+        background: darkgray;
+        opacity: 0;
+
+        transform: translateX(100%);
+        transition: transform 250ms ease-in-out,
+                    opacity 250ms ease-in-out;
+    }
+
+    .primary-navigation.open {
+      transform: translateX(0);
+      opacity: 1;
+   }
 }

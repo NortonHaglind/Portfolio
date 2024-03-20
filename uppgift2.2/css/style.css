@@ -1,5 +1,5 @@
 body {
-   
+
     margin: 0;
 
 }
@@ -8,21 +8,24 @@ body {
     scroll-behavior: smooth;
 
 }
-.skip-link{
+
+.skip-link {
     position: fixed;
-    z-index:0;
-    top:0;
-    left:1rem;
-    padding:1rem 2rem;
-    color:black;
+    z-index: 0;
+    top: 0;
+    left: 1rem;
+    padding: 1rem 2rem;
+    color: black;
     background-color: white;
     translate: 0 -100%;
     transition: translate 250ms ease-in-out;
 }
-.skip-link:focus{
+
+.skip-link:focus {
     translate: 0;
     z-index: 9906;
 }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -33,21 +36,26 @@ header {
     padding: 1rem;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: white;
+    position: sticky;
+    top:0;
 
 
 }
-.logo{
+
+.logo {
     width: 60px;
 }
+
 .title-logo {
     display: flex;
     gap: 1rem;
 }
 
-.primary-navigtion {
+.primary-navigation {
     display: flex;
     list-style: none;
     gap: 1rem;
+
 }
 
 main {
@@ -65,7 +73,7 @@ main {
     margin: 1rem;
     padding: 1rem;
     max-width: 50%;
-    top: 1rem;
+    top: 8rem;
     position: sticky;
 }
 
@@ -105,4 +113,78 @@ footer {
 .nav-link-down:visited {
     color: white;
     text-decoration: none;
+}
+
+.hamburger-button {
+    all: unset;
+    display: none;
+    place-items: center;
+}
+
+@media(width<720px) {
+    .hamburger-button {
+        display: grid;
+    }
+}
+
+@media (width < 720px) {
+    .primary-navigation {
+        display: none;
+        
+    }
+
+    .side-nav {
+        display: none;
+    }
+
+    main {
+        columns: 1;
+        gap:0;
+        padding:1rem;
+        grid-template-columns:1fr;
+    }
+    aside{
+        display: none;
+    }
+    .section {
+        padding-inline: 2rem;
+    }
+
+    .footer-container {
+        display: block;
+    }
+
+    .main-content {
+        clip-path: none;
+    }
+
+}
+
+@media (width < 720px) {
+
+    .primary-navigation {
+        position: fixed;
+
+        height:100%;
+        inset: 5rem 0 0 0;
+
+        display: flex;
+        justify-content: start;
+        align-items: end;
+        flex-direction: column;
+
+        padding: 4rem 2rem;
+
+        background: darkgray;
+        opacity: 0;
+
+        transform: translateX(100%);
+        transition: transform 250ms ease-in-out,
+            opacity 250ms ease-in-out;
+    }
+
+    .primary-navigation.open {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
