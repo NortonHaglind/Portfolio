@@ -1,0 +1,43 @@
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+.box-mail{
+    width:30%;
+}
+.box-text{
+    width: 40%;
+    height: 12vh;
+    resize:none;
+}
+.box-name{
+    width: 30%;
+}
+.buttons{
+    display: flex;
+    gap: 2rem;
+    max-width: 30%;
+    
+}
+.reset-btn{
+    width: 5rem;
+    height: 2rem;
+    background-color: red;
+    border-radius: 0.5rem;
+    color: whitesmoke;
+    
+}
+.send-btn{
+    width: 5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+p{
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+.send-btn:active , .reset-btn:active{
+    background-color: lightcoral;
+}
