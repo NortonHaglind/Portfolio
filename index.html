@@ -7,37 +7,52 @@
     <title>Nortons Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="/img/Hype.png" type="image/x-icon"> <!--länkar en bild till webbsid iconen-->
+    <script src="/uppgift2.2/hamburger.js" defer></script>
 
 <body>
     <header>
         <h1>Norton Portfolio</h1>
         <nav>
-            <ol class="navbar"><!--Lånade koden från den liken du skcickade-->
-                <a href="#">Hem</a>
-                <div class="subnav"> <!--gör en under tag i Nav-en-->
-                    <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
-                    <div class="subnav-content">
-                        <a href="#projects">Projekt</a>
-                        <a href="#about">Om mig</a>
+            <ol class="primary-navigation" id="primary-navigation"><!--Lånade koden från den liken du skcickade-->
+                <li><a class="skip-link" href="#first-link">Skip to main content</a></li>
+                <li><a href="#">Hem</a></li>
+                <li>
+                    <div class="subnav"> <!--gör en under tag i Nav-en-->
+                        <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content">
+                            <a href="#projects">Projekt</a>
+                            <a href="#about">Om mig</a>
+
+                        </div>
 
                     </div>
-                </div>
-                <div class="subnav">
-                    <button class="subnavbtn">Uppgifter <i class="fa fa-caret-down"></i></button>
-                    <div class="subnav-content">
-                        <a href="/uppgift 3/uppgift3/">Uppgift 3</a>
-                        <a href="/uppgift4">Uppgift 4</a>
-                        <a href="/uppgift5">Uppgift 5</a>
-                        <a href="/uppgift5.2">Uppgift 5.2</a>
-                        <a href="/uppgift6">Uppgift 6</a>
-                        <a href="/uppgift2.1/">Uppgift 2.1</a>
-                        <a href="/uppgift2.2/historia/index.html">Uppgift 2.2</a>
+                </li>
+                <li>
+                    <div class="subnav">
+                        <button class="subnavbtn">Uppgifter <i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content">
+                            <a href="/uppgift 3/uppgift3/">Uppgift 3</a>
+                            <a href="/uppgift4">Uppgift 4</a>
+                            <a href="/uppgift5">Uppgift 5</a>
+                            <a href="/uppgift5.2">Uppgift 5.2</a>
+                            <a href="/uppgift6">Uppgift 6</a>
+                            <a href="/uppgift2.1/">Uppgift 2.1</a>
+                            <a href="/uppgift2.2/historia/index.html">Uppgift M2</a>
+                        </div>
                     </div>
-                </div>
+                </li>
 
 
-                <a href="mailto:norton.haglindhilbers@elev.ga.ntig.se">Kontakt</a>
+                <li><a href="mailto:norton.haglindhilbers@elev.ga.ntig.se">Kontakt</a></li>
             </ol>
+
+            <button class="hamburger-button" id="hamburger-button" aria-label="hamburger-button" aria-expanded="false">
+                <svg fill="black" class="icon-hamburger" viewbox="0 0 100 100" width="32">
+                    <rect class="line top" width="90" height="10" x="10" y="20" rx="5"></rect>
+                    <rect class="line middle" width="90" height="10" x="10" y="45" rx="5"></rect>
+                    <rect class="line bottom" width="90" height="10" x="10" y="70" rx="5"></rect>
+                </svg>
+            </button>
         </nav>
     </header>
     <main>
@@ -52,7 +67,7 @@
 
                 </div>
                 <div class="description-img"><a href="/uppgift 3/uppgift3/"><img src="/img/webb-uppgift3.png"
-                            alt="bild på uppgift 3"></a></div>
+                            alt="bild på uppgift 3"></a></div><!--gör bilder till länkar-->
             </section>
             <section class="about">
                 <div class="description">
@@ -86,7 +101,7 @@
             </section>
             <section class="about">
                 <div class="description">
-                    <h2>Uppgift 6</h2>
+                    <h2 id="first-link">Uppgift 6</h2>
                     <p>I den här uppgiften skulle vi göra en hemsida med alla tagar som stod i en lista inför ett prov.
                         det var också förberedande inför portfolion. Vi använde oss även av nth-child() för att gör
                         raderna.</p>
@@ -114,8 +129,8 @@
                     <p>I den här uppgiften har vi använt oss av colums och responsivitet samt navigation</p>
 
                 </div>
-                <div class="description-img"><a href="/uppgift2.2/historia/index.html"><img src="/img/webb-uppgift2.2.png"
-                            alt="bild på uppgift 2.2"></a>
+                <div class="description-img"><a href="/uppgift2.2/historia/index.html"><img
+                            src="/img/webb-uppgift2.2.png" alt="bild på uppgift 2.2"></a>
 
                 </div>
             </section>
